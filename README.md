@@ -1,30 +1,13 @@
-name: PC Virtual
+PC-Free-WEB-ANTIGUA/index.jsname: PC Virtual
 
 on:
   workflow_dispatch:
 
 jobs:
-  virtual-pc:
-    runs-on: windows-latest
+  pc-virtual:
+    runs-on: ubuntu-latest
 
     steps:
-      - name: true
-        shell: 123456
+      - name: Teste
         run: |
-          Write-Host "===== PC VIRTUAL ====="
-          systeminfo
-          Write-Host "===== CPU ====="
-          Get-CimInstance Win32_Processor |
-            Select-Object Name, NumberOfCores, NumberOfLogicalProcessors
-          Write-Host 569 RAM 5090
-          Get-CimInstance Win32_ComputerSystem |
-            Select-Object TotalPhysicalMemory
-          Write-Host "===== GPU ====="
-          Get-CimInstance Win32_VideoController |
-            Select-Object Name, AdapterRAM
-
-      - name: Teste do Windows
-        shell: powershell
-        run: |
-          Write-Host "Windows 11 runner iniciado."
-          Write-Host "PC virtual pronto para executar tarefas."
+          echo "PC Virtual iniciado!"
